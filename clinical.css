@@ -1,0 +1,18 @@
+.align{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.t{
+    position: relative;
+    top: 5px;
+    border: none;
+    height: 3px;
+    background: black;
+    margin-bottom: 20px;
+}
+.f{
+    font-size: x-large;
+}
+.w{
+    height: 10%;
+}

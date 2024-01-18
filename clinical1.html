@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="clinical.css">
+</head>
+<body>
+    <p class="align">In biomedical image registration, the most frequently used interpolation methods include
+        nearest neighbor, linear, bilinear, trilinear, cubic, bicubic, tricubic, quadrilinear, and cubic
+        convolution interpolation. The more complex the interpolation methods, the more
+        surrounding points concerned, and the slower the registration speed. In order to speed
+        up the registration procedure, low cost interpolation techniques are often preferred.
+        Because of its good trade-off between accuracy and computational complexity, the
+        bilinear interpolation is the most commonly used method (Zitová and Flusser, 2003).
+        According to the research of Thévenaz, Blu, and Unser (2000), in cardiac and thorax image
+        registration, trilinear interpolation can help to achieve good registration performance</p>
+        <p class="align">The optimization algorithm is required by almost every registration procedure, which
+            serves as a searching strategy. There are several optimization algorithms often used in
+            the biomedical image registration. The exhaustive searching method has been selected
+            as optimization strategy by researchers. However, because of its high computational
+            complexity, the exhaustive method for searching for the global optimization is not an
+            efficient choice. The Powell algorithm by Powell (1964) and Simplex method by Nelder and
+            Mead (1965) are more efficient than the exhaustive searching strategy in finding an
+            optimum solution</p>
+            <p class="align">The Powell algorithm has been used frequently as an optimization strategy for biomedical
+                image registration, for example, Collignon et al. (1995), Maes, Collignon, Vandermeulen,
+                Marchal, and Suetens (1997), Wang and Feng (2005). The Powell algorithm performs a
+                succession of one-dimensional optimizations, finding in turn the best solution along
+                each freedom degree, and then returning to the first degree of freedom. The algorithm
+                stops when it is unable to find a new solution with a significant improvement to the
+                current solution.</p>
+                <p class="align">The Downhill-Simplex algorithm has been used by, for example, Hill et al. (1993) and van
+                    Herk and Kooy (1994). Rohlfing and Maurer (2003) adopted a variant of the DownhillSimplex algorithm restricted to the direction of the steepest ascent.</p>
+                  <p class="align">In order to search a vast number of parameters, which represent the complex deformation
+                    fields, multi-resolution optimization algorithms have been adopted by researchers in the
+                    biomedical image registration community, for example, Penny (1998). Initially, the
+                    registration is performed at coarse spatial scales, then to the finer ones. These multiresolution or coarse-to-fine optimization algorithms can accelerate computation and help
+                    to escape from the local minima.</p> <br>
+                    <b class="align f">Performance Validation of Biomedical Image</b><br>
+                    <b class="align f">Registration</b><hr class="align t"><br>
+                    <p class="align">For all types of registration, assessment of the registration accuracy is very important.
+                        A medical image registration method cannot be accepted as a clinical tool to make
+                        decisions about patient management until it has been proved to be accurate enough.
+                        Important criteria for assessing the performance of registration schemes are accuracy,
+                        robustness, usability, and computational complexity. The often used validation methods
+                        include Fiducial landmarks, Phantom studies, and Visual inspection.</p>
+                        <p class="align">Fiducial landmarks, which can predict the expected error distribution, have been devised
+                            to assess the registration accuracy. To a certain extent, assessment using fiducial
+                            landmarks provides a “gold standard” for medical image registration. However, the
+                            fiducial landmarks can either suffer from the movement of skin mobility or are highly
+                            invasive. Also, these validation measures cannot be applied retrospectively</p>
+                            <p class="align">Phantom studies are important for the estimation of the registration accuracy because
+                                the data and displacement information is fully known beforehand. Phantom-based
+                                validations provide measures for mean transformation errors and computational complexity for different methods, and they are especially useful for estimating the accuracy
+                                of intra-modality registration methods.</p>
+                                <p class="align">Visual inspection, which provides a qualitative assessment, is the most intuitive method
+                                    for evaluation of the registration accuracy. This assessment method may involve the
+                                    inspection of subtraction images, contour overlays, or viewing anatomical landmarks. It
+                                    has been used widely in both rigid and non-rigid registration assessment, but it may be
+                                    considered as an informal and insufficient approach.</p>
+                                    <p class="align">Researchers have been developing novel and practical validation techniques, for
+                                        example, Hellier, Barillot, Memin and Perez (2001) proposed a hierarchical estimation
+                                        method for 3-D registration. The measurement of the consistency of transformations has
+                                        been proposed to serve as accuracy qualification method by, for example, Holden et al.
+                                        (2000). Wang, Feng, Yeh, and Huang (2001) proposed a novel automatic method to
+                                        estimate confidence intervals of the resulting registration parameters and allow the
+                                        precision of registration results to be objectively assessed for 2-D and 3-D medical
+                                        images. Fitzpatrick, Hill, and Maurer (2000); Mäkelä, Clarysse, Sipilä, Pauna, Pham, Katila,
+                                        and Magnin (2002), and Zitová and Flusser (2003) presented good discussions and
+                                        summaries about performance validation methods for medical image registration</p>
+                                        <p class="align">However, validation of registration accuracy is a difficult task because of the lack of the
+                                            ground truth. Objective performance validation still remains a challenge in the field of
+                                            biomedical image registration.</p>
+                                            <center><b class="f">Major Biomedical Image</b><br><b class="f">Registration Methodologies</b></center><hr class="align t"><br>
+                                            <p class="align">As described previously, the biomedical image registration methods can be divided into<br>
+                                                intensity-based category and feature-based category</p>
+                                                <b class="align f">Intensity-Based Medical Image Registration</b><hr class="align t"><br>
+                                                <p class="align">Intensity-based medical image registration fully and directly exploits the image raw
+                                                    intensities, and an explicit segmentation of the images is not required. Therefore, this
+                                                    category of registration provides high registration accuracy. Because of little or no user</p>
+                                                    <p class="align">interaction involved in this kind of registration, fully automated registration and
+                                                        quantitative assessment become possible. However, this category of schemes does not
+                                                        make use of knowledge of the organ structure and also the registration computation is
+                                                        not very efficient. The well-established intensity-based similarity measures used in the
+                                                        biomedical image registration area include minimizing the intensity differences, correlation-based techniques, and entropy-based techniques.</p>
+                                                        <p class="align">Similarity measures by minimizing the intensity differences include the Sum of Squared
+                                                            Differences (SSD) and the Sum of Absolute Differences (SAD), which exhibit a minimum
+                                                            in the case of perfect matching. Although they are efficient to calculate, these methods
+                                                            are sensitive to intensity changes.</p>
+                                                            <center class="w"><img  src="../sai1/simg1.png"></center>
+                                                            <p class="align">Where <i>R(i)</i> is the intensity value at position i of reference image<i> R </i>and<i> S(i)</i> is the
+                                                                corresponding intensity value in study image<i> S</i>;<i> T</i> is geometric transformation.</p>
+                                                                <p class="align">Correlation techniques were proposed to aim at multimodal biomedical image registration, for example, Maintz, van den Elsen, and Viergeve (1996). The cross-correlation
+                                                                    technique has also been used for rigid motion correction of SPECT cardiac images, for
+                                                                    example, Mäkelä et al. (2002). However, because usually the geometric deformations of
+                                                                    the image modalities are not likely to be linear, these correlation methods, which require
+                                                                    a linear dependence between the intensity of the images, cannot always achieve reliable
+                                                                    registration results. The normalized cross correlation is defined as:</p>
+                                                                    <center class="w"><img src="../sai1/simg2.png"></center>
+                                                                    <p class="align">Where <i>I<sub>R</sub>(i)</i> is the intensity value at position i of reference image<i> R</i> and <i>I<sub>S</sub>
+                                                                        (i) </i> the
+                                                                        corresponding intensity value in study image<i> S; I<sub>R</sub></i> and  <i>I<sub>s</sub></i> are the mean intensity value
+                                                                        of reference and study image respectively</p>
+                                                                        <p class="align">Information theoretic techniques play an essential role in multimodality medical image
+                                                                            registration</p>
+                                                                            <p class="align">The Shannon entropy is widely used as a measure of information in many branches of
+                                                                                engineering. It was originally developed as a part of information theory in the 1940s and
+                                                                                describes the average information supplied by a set of symbols {x} whose probabilities
+                                                                                are given by {p(x)}.</p>
+                                                                                <center class="w"><img src="../sai1/simg3.png"></center>
+                                                                                <p class="align">In image registration area, when the images are correctly aligned, the joint histograms
+                                                                                    have tight clusters and the joint entropy is minimized. These clusters disperse as the
+                                                                                    images become less well registered, and correspondingly, the joint entropy is increased.
+                                                                                    Because minimizing the entropy does not require that the histograms are unimodal, the
+                                                                                    joint entropy is generally applicable to multimodality registration and obviates the need
+                                                                                    of segmentation of images.</p>
+                                                                                    <p class="align">Mutual information (MI) was first proposed by Collignon et al. (1995) and Viola et al.
+                                                                                        (1995), and it is a promising and powerful criterion for multimodality medical image
+                                                                                        registration, for example, Maes, et al. (1997); Roche, Malandain, and Ayache (2000);
+                                                                                        Thevenaz and Unser (2000); and Likar and Pernus (2001).</p>
+                                                                                        <p class="align">Let R be the reference data presented by m samples {r<sub>0</sub>
+                                                                                            , r<sub>1</sub>
+                                                                                            , ..., r<sub>m–1</sub>} with a marginal
+                                                                                            probability distribution P<sub>R</sub>(r). Analogously, the study data S consists of n samples {s0
+                                                                                            ,
+                                                                                            s<sub>1</sub>
+                                                                                            , ..., s<sub>n–1</sub>} with a marginal probability distribution P<sub>S</sub>
+                                                                                            (s). The mutual information I of the
+                                                                                            reference image R and study image S measures the degree of dependence of R and S by
+                                                                                            measuring distance between the joint distribution P<sub>RS</sub>(r,s) and the distribution associated
+                                                                                            to P<sub>R</sub>(r) and P<sub>s</sub>
+                                                                                            (s). MI can be defined as:</p>
+                                                                                           <center class="w"> <img src="../sai1/simg4.png"></center>
+                                                                                           <p class="align">With H(R) and H(s) being the entropy of R and S, respectively, H(R,S) is their joint
+                                                                                            entropy</p>
+                                                                                            <center class="w"><img src="../sai1/simg5.png"></center>
+                                                                                            <p class="align">MI is related to entropy by the equation:</p>
+                                                                                            <center><img src="../sai1/simg6.png"></center>
+                                                                                            <p class="align">Under the assumption that the mutual information of the two images is maximum when
+                                                                                                the images are in registration, registration can be performed by maximizing the mutual
+                                                                                                information as a function of a geometric transformation T of the study image S:</p>
+                                                                                                <center class="w"><img src="../sai1/simg7.png"></center>
+                                                                                                <p class="align">T<sub>reg</sub> is the transformation that will bring the images into registration.
+                                                                                                    Mutual information registration does not assume a linear relationship among intensity
+                                                                                                    values of the images to be registered and is one of the few intensity-based measures that
+                                                                                                    are well suited to the multimodality image registration</p>
+                                                                                                    <b class="align f">Feature-Based Medical Image Registration</b><hr class="align t">
+                                                                                                    <p class="align">In feature-based registration approaches, transformations often can be stated in analytic
+                                                                                                        form, hence efficient computational schemes can be achieved. However, in most of these
+                                                                                                        methods, the preprocess step is needed and the registration results are highly dependent
+                                                                                                        on the result of this preprocess. Because registration algorithms using landmarks often
+                                                                                                        require users to specify corresponding landmarks from the two images manually or semiautomatically, such methods cannot always provide very accurate registration</p>
+                                                                                                    <p class="align">The feature-based medical image registration methods can be classified into point-based
+                                                                                                        approaches, for example, Fitzpatrick, West, and Maurer (1998), curve-based algorithms,
+                                                                                                        for example, Maintz et al. (1996), and Subsol (1999), and surface-based methods, for
+                                                                                                        example, Chen, Pellizari, Chen, Cooper, and Levin (1987); Borgefors (1988), and Pellizari,
+                                                                                                        Chen, Spelbring, Weichselbaum, and Chen (1989). Figure 4 illustrates the feature-based
+                                                                                                        registration procedure. Point-based registration involves identifying the corresponding
+                                                                                                        points, matching the points, and inferring the image transformation.</p>
+                                                                                                    <p class="align">The corresponding points are also called homologous landmarks to emphasize that they
+                                                                                                        should present the same feature in the different images. These points can either be
+                                                                                                        anatomical features or markers attached to the patient, which can be identified in both
+                                                                                                        images modalities. Anatomical landmark based registration methods have the drawback
+                                                                                                        of user interaction being required. Registration algorithms based on extrinsic landmarks
+                                                                                                        which maybe invasive or non-invasive, are comparatively easy to implement, fast, and
+                                                                                                        can be automated, but they may have drawbacks of invasiveness and less accurate
+                                                                                                        results. As a successful example, iterative closest points (ICP) method proposed by Besl
+                                                                                                        and McKay (1992), maybe the most widely used medical image registration approach in
+                                                                                                        medical imaging applications, for example, Fitzpatrick, West, and Maurer (1998).</p>
+                                                                                                    <p class="align">When points are available, Thin-Plate Splines (TPS) which produce a smoothly interpolated spatial mapping, are often used to determine the transformation for 2-D medical
+                                                                                                        image registration, for example, Bookstein (1989)</p>
+                                                                                                    <p class="align">Boundaries or surfaces are distinct features in medical image registration due to various
+                                                                                                        segmentation algorithms which can successfully locate such features. Surface-based
+                                                                                                        registration methods can be rigid or deformable.</p>
+
+                    
+    
+</body>
+</html>
